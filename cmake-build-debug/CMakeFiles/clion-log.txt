@@ -1,0 +1,24 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/matthewmunson/Documents/GitHub/MachineVision
+-- The C compiler identification is AppleClang 11.0.3.11030032
+-- The CXX compiler identification is AppleClang 11.0.3.11030032
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ - works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenCV: /Users/matthewmunson/opencv_build (found version "4.5.1") 
+-- OpenCV library status:
+--     config: /Users/matthewmunson/opencv_build
+--     version: 4.5.1
+--     libraries: opencv_calib3d;opencv_core;opencv_dnn;opencv_features2d;opencv_flann;opencv_gapi;opencv_highgui;opencv_imgcodecs;opencv_imgproc;opencv_ml;opencv_objdetect;opencv_photo;opencv_stitching;opencv_video;opencv_videoio
+--     include path: /Users/matthewmunson/opencv_build;/Users/matthewmunson/opencv-4.5.1/include;/Users/matthewmunson/opencv-4.5.1/modules/core/include;/Users/matthewmunson/opencv-4.5.1/modules/flann/include;/Users/matthewmunson/opencv-4.5.1/modules/imgproc/include;/Users/matthewmunson/opencv-4.5.1/modules/ml/include;/Users/matthewmunson/opencv-4.5.1/modules/photo/include;/Users/matthewmunson/opencv-4.5.1/modules/dnn/include;/Users/matthewmunson/opencv-4.5.1/modules/features2d/include;/Users/matthewmunson/opencv-4.5.1/modules/imgcodecs/include;/Users/matthewmunson/opencv-4.5.1/modules/videoio/include;/Users/matthewmunson/opencv-4.5.1/modules/calib3d/include;/Users/matthewmunson/opencv-4.5.1/modules/highgui/include;/Users/matthewmunson/opencv-4.5.1/modules/objdetect/include;/Users/matthewmunson/opencv-4.5.1/modules/stitching/include;/Users/matthewmunson/opencv-4.5.1/modules/ts/include;/Users/matthewmunson/opencv-4.5.1/modules/video/include;/Users/matthewmunson/opencv-4.5.1/modules/gapi/include
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/matthewmunson/Documents/GitHub/MachineVision/cmake-build-debug
