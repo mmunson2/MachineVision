@@ -4,7 +4,31 @@
  * @author Matthew Munson
  * @date 4/12/2021
  *
- * Implementation file for methods in the Program1 Class.
+ * Implementation file for methods in the Program1 Class. Functions include:
+ *
+ * Example 1: Basic image processing
+ *     - Mat imgProcessingExample(const Mat& image)
+ *
+ * Example 2: Smoothing Slider Example
+ *     - void on_smoothing_trackbar(int alphaSlider, void* testImage)
+ *     - void smoothingSliderExample(Mat image)
+ *
+ * Example 3: Edge Detection Slider Example
+ *     - void blur_and_canny(Program1 *program, const Mat& image, const string& windowName)
+ *     - void print_settings(Program1 *program)
+ *     - void trackbar_callback(int sliderValue, void*combinedData)
+ *     - void edgeDetectionSliderExample(const Mat& image)
+ *
+ * Example 4: Additional Image Effects
+ *     - Mat additionalImageEffectsExample(const Mat& image)
+ *
+ * Getters and Setters for all instance variables
+ *     - Size X
+ *     - Size Y
+ *     - Sigma X
+ *     - Sigma Y
+ *     - Threshold 1
+ *     - Threshold 2
  *
  **************************************************************************************************/
 
@@ -17,6 +41,9 @@ using namespace cv;
  * PART I
  **************************************************************************************************/
 
+//Purpose: Demonstrate basic image processing
+//Preconditions: None
+//Postconditions: Image is rotated 180 degrees, grey-scaled, and edges detected.
 Mat Program1::imgProcessingExample(const Mat& image)
 {
     Mat copy = Mat();
@@ -55,6 +82,9 @@ Mat Program1::imgProcessingExample(const Mat& image)
  **************************************************************************************************/
 
 // Callback function for when the blur trackbar is changed
+// Purpose: Handle changes to the blur trackbar
+// Preconditions: Trackbar initialized, testImage struct created and passed in
+// Postconditions: Image blurred and displayed
 void Program1::on_smoothing_trackbar(int alphaSlider, void* testImage)
 {
     Mat im = *((Mat*) testImage);
@@ -71,6 +101,9 @@ void Program1::on_smoothing_trackbar(int alphaSlider, void* testImage)
 };
 
 // Example II code - Creates a trackbar that blurs an image
+// Purpose: Demonstrate trackbar usage and blur of an image
+// Preconditions: None
+// Postconditions: None
 void Program1::smoothingSliderExample(Mat image)
 {
     string windowName = "Smoothing Adjustment";
@@ -97,6 +130,9 @@ void Program1::smoothingSliderExample(Mat image)
  **************************************************************************************************/
 
 // Applies a gaussian blur and canny edge detection algorithm
+// Purpose: Provide a modular interface and wrap openCV functionality
+// Preconditions: Program 1 initialized. Window created
+// Postconditions: Image display updated
 void Program1::blur_and_canny(Program1 *program, const Mat& image, const string& windowName)
 {
     Mat copy1 = Mat();
@@ -117,6 +153,9 @@ void Program1::blur_and_canny(Program1 *program, const Mat& image, const string&
 }
 
 // Prints instance variables to console
+// Purpose: Allow the user to see their exact trackbar settings
+// Preconditions: None
+// Postconditions: None
 void Program1::print_settings(Program1 *program)
 {
     cout << "__________________________" << endl;
@@ -130,6 +169,9 @@ void Program1::print_settings(Program1 *program)
 }
 
 // Generalized Trackbar callback
+// Purpose: Handle all changes to any of the six trackbars
+// Preconditions: Slider initialized. CombinedData struct initialized.
+// Postconditions: Program1 instance variables updated.
 void Program1::trackbar_callback(int sliderValue, void*combinedData)
 {
     callbackData* data = (callbackData*) combinedData;
@@ -187,6 +229,9 @@ void Program1::trackbar_callback(int sliderValue, void*combinedData)
 /***************************************************************************************************
  * Edge Detection Slider
  **************************************************************************************************/
+// Purpose: Allow the user to adjust six parameters of an edge detection algorithm
+// Preconditions: None
+// Postconditions: None
 void Program1::edgeDetectionSliderExample(const Mat& image)
 {
     string windowName = "Edge Detection";
@@ -268,6 +313,9 @@ void Program1::edgeDetectionSliderExample(const Mat& image)
  * PART IV
  **************************************************************************************************/
 
+// Purpose: Show two additional image effects
+// Preconditions: None
+// Postconditions: Returns the modified image
 Mat Program1::additionalImageEffectsExample(const Mat& image)
 {
     string windowName = "Additional-Effects";
@@ -289,6 +337,10 @@ Mat Program1::additionalImageEffectsExample(const Mat& image)
 
 /***************************************************************************************************
  * GETTERS AND SETTERS
+ *
+ * Purpose: To provide access to instance variables within the Program1 Object
+ * Precondition: Object initialized
+ * Postcondition: None for get. Instance variables updated for set.
  **************************************************************************************************/
 
 int Program1::getSizeX() const { return this->sizeX; }

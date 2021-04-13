@@ -4,7 +4,20 @@
  * @author Matthew Munson
  * @date 4/12/2021
  *
- * Header file for methods in the Program1 Class.
+ * Header file for methods in the Program1 Class. Contains public methods for
+ * examples 1-4. This includes:
+ *
+ * - Basic image processing
+ *
+ * - A smoothing slider example
+ *
+ * - Edge detection slider example
+ *
+ * - Additional effects example
+ *
+ *
+ * Header file documentation is user-focused. For implementation-level comments
+ * including preconditions and postconditions, see Program1.cpp
  *
  ******************************************************************************/
 

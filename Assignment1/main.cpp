@@ -6,6 +6,9 @@
  *
  * Driver file. Creates a Program1 object and runs all example functions.
  *
+ * - Assumes you have a file named "pippy.jpg" in the working directory
+ * - Assumes you have a file named "Mercy.png" in the working directory
+ *
  **************************************************************************************************/
 
 #include <iostream>
@@ -13,12 +16,15 @@
 
 using namespace std;
 
+// Purpose: Entry point, runs all Program1 functionality
+// Preconditions: "pippy.jpg" and "Mercy.png" in working directory
+// Postconditions: "output.jpg" and "step5_output.png" created
 int main()
 {
     string image1_input_filename = "../data/pippy.jpg";
     string image1_output_filename = "../data/output.jpg";
 
-    string image2_input_filename = "../data/Matthew.png";
+    string image2_input_filename = "../data/Mercy.png";
     string image2_output_filename = "../data/step5_output.png";
 
     Program1 program1 = Program1();
@@ -41,7 +47,7 @@ int main()
 
     Mat invertedImage = Program1::additionalImageEffectsExample(customImage);
 
-    cv::imwrite(image2_output_filename, output);
+    cv::imwrite(image2_output_filename, invertedImage);
 
     return 0;
 }
