@@ -170,32 +170,32 @@ Assignment1/Program1.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MachineVision.dir/build.make CMakeFiles/MachineVision.dir/Assignment1/Program1.cpp.s
 .PHONY : Assignment1/Program1.cpp.s
 
-Assignment1/main.o: Assignment1/main.cpp.o
+Assignment2/main.o: Assignment2/main.cpp.o
 
-.PHONY : Assignment1/main.o
+.PHONY : Assignment2/main.o
 
 # target to build an object file
-Assignment1/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MachineVision.dir/build.make CMakeFiles/MachineVision.dir/Assignment1/main.cpp.o
-.PHONY : Assignment1/main.cpp.o
+Assignment2/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MachineVision.dir/build.make CMakeFiles/MachineVision.dir/Assignment2/main.cpp.o
+.PHONY : Assignment2/main.cpp.o
 
-Assignment1/main.i: Assignment1/main.cpp.i
+Assignment2/main.i: Assignment2/main.cpp.i
 
-.PHONY : Assignment1/main.i
+.PHONY : Assignment2/main.i
 
 # target to preprocess a source file
-Assignment1/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MachineVision.dir/build.make CMakeFiles/MachineVision.dir/Assignment1/main.cpp.i
-.PHONY : Assignment1/main.cpp.i
+Assignment2/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MachineVision.dir/build.make CMakeFiles/MachineVision.dir/Assignment2/main.cpp.i
+.PHONY : Assignment2/main.cpp.i
 
-Assignment1/main.s: Assignment1/main.cpp.s
+Assignment2/main.s: Assignment2/main.cpp.s
 
-.PHONY : Assignment1/main.s
+.PHONY : Assignment2/main.s
 
 # target to generate assembly for a file
-Assignment1/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MachineVision.dir/build.make CMakeFiles/MachineVision.dir/Assignment1/main.cpp.s
-.PHONY : Assignment1/main.cpp.s
+Assignment2/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MachineVision.dir/build.make CMakeFiles/MachineVision.dir/Assignment2/main.cpp.s
+.PHONY : Assignment2/main.cpp.s
 
 # Help Target
 help:
@@ -209,9 +209,9 @@ help:
 	@echo "... Assignment1/Program1.o"
 	@echo "... Assignment1/Program1.i"
 	@echo "... Assignment1/Program1.s"
-	@echo "... Assignment1/main.o"
-	@echo "... Assignment1/main.i"
-	@echo "... Assignment1/main.s"
+	@echo "... Assignment2/main.o"
+	@echo "... Assignment2/main.i"
+	@echo "... Assignment2/main.s"
 .PHONY : help
 
 

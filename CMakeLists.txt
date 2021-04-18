@@ -14,6 +14,6 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(MachineVision Assignment1/Program1.cpp Assignment1/Program1.h Assignment1/main.cpp)
+add_executable(MachineVision Assignment1/Program1.cpp Assignment1/Program1.h Assignment2/main.cpp)
 
 target_link_libraries(MachineVision ${OpenCV_LIBS})

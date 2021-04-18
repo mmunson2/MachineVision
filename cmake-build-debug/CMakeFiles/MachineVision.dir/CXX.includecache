@@ -6,23 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/Users/matthewmunson/Documents/GitHub/MachineVision/Assignment1/Program1.cpp
-Program1.h
-/Users/matthewmunson/Documents/GitHub/MachineVision/Assignment1/Program1.h
-
-/Users/matthewmunson/Documents/GitHub/MachineVision/Assignment1/Program1.h
+/Users/matthewmunson/Documents/GitHub/MachineVision/Assignment2/main.cpp
+iostream
+-
+opencv2/core.hpp
+-
 opencv2/opencv.hpp
 -
-opencv2/imgproc.hpp
--
-iostream
--
-
-/Users/matthewmunson/Documents/GitHub/MachineVision/Assignment1/main.cpp
-iostream
--
-Program1.h
-/Users/matthewmunson/Documents/GitHub/MachineVision/Assignment1/Program1.h
 
 /Users/matthewmunson/opencv-4.5.1/include/opencv2/opencv.hpp
 opencv2/opencv_modules.hpp

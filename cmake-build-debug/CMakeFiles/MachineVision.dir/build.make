@@ -90,29 +90,29 @@ CMakeFiles/MachineVision.dir/Assignment1/Program1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MachineVision.dir/Assignment1/Program1.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/matthewmunson/Documents/GitHub/MachineVision/Assignment1/Program1.cpp -o CMakeFiles/MachineVision.dir/Assignment1/Program1.cpp.s
 
-CMakeFiles/MachineVision.dir/Assignment1/main.cpp.o: CMakeFiles/MachineVision.dir/flags.make
-CMakeFiles/MachineVision.dir/Assignment1/main.cpp.o: ../Assignment1/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/matthewmunson/Documents/GitHub/MachineVision/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MachineVision.dir/Assignment1/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MachineVision.dir/Assignment1/main.cpp.o -c /Users/matthewmunson/Documents/GitHub/MachineVision/Assignment1/main.cpp
+CMakeFiles/MachineVision.dir/Assignment2/main.cpp.o: CMakeFiles/MachineVision.dir/flags.make
+CMakeFiles/MachineVision.dir/Assignment2/main.cpp.o: ../Assignment2/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/matthewmunson/Documents/GitHub/MachineVision/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MachineVision.dir/Assignment2/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MachineVision.dir/Assignment2/main.cpp.o -c /Users/matthewmunson/Documents/GitHub/MachineVision/Assignment2/main.cpp
 
-CMakeFiles/MachineVision.dir/Assignment1/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MachineVision.dir/Assignment1/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/matthewmunson/Documents/GitHub/MachineVision/Assignment1/main.cpp > CMakeFiles/MachineVision.dir/Assignment1/main.cpp.i
+CMakeFiles/MachineVision.dir/Assignment2/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MachineVision.dir/Assignment2/main.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/matthewmunson/Documents/GitHub/MachineVision/Assignment2/main.cpp > CMakeFiles/MachineVision.dir/Assignment2/main.cpp.i
 
-CMakeFiles/MachineVision.dir/Assignment1/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MachineVision.dir/Assignment1/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/matthewmunson/Documents/GitHub/MachineVision/Assignment1/main.cpp -o CMakeFiles/MachineVision.dir/Assignment1/main.cpp.s
+CMakeFiles/MachineVision.dir/Assignment2/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MachineVision.dir/Assignment2/main.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/matthewmunson/Documents/GitHub/MachineVision/Assignment2/main.cpp -o CMakeFiles/MachineVision.dir/Assignment2/main.cpp.s
 
 # Object files for target MachineVision
 MachineVision_OBJECTS = \
 "CMakeFiles/MachineVision.dir/Assignment1/Program1.cpp.o" \
-"CMakeFiles/MachineVision.dir/Assignment1/main.cpp.o"
+"CMakeFiles/MachineVision.dir/Assignment2/main.cpp.o"
 
 # External object files for target MachineVision
 MachineVision_EXTERNAL_OBJECTS =
 
 MachineVision: CMakeFiles/MachineVision.dir/Assignment1/Program1.cpp.o
-MachineVision: CMakeFiles/MachineVision.dir/Assignment1/main.cpp.o
+MachineVision: CMakeFiles/MachineVision.dir/Assignment2/main.cpp.o
 MachineVision: CMakeFiles/MachineVision.dir/build.make
 MachineVision: /Users/matthewmunson/opencv_build/lib/libopencv_gapi.4.5.1.dylib
 MachineVision: /Users/matthewmunson/opencv_build/lib/libopencv_highgui.4.5.1.dylib

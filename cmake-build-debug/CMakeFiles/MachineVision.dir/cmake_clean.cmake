@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MachineVision.dir/Assignment1/Program1.cpp.o"
-  "CMakeFiles/MachineVision.dir/Assignment1/main.cpp.o"
+  "CMakeFiles/MachineVision.dir/Assignment2/main.cpp.o"
   "MachineVision"
   "MachineVision.pdb"
 )

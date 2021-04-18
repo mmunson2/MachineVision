@@ -122,7 +122,7 @@
 		<Unit filename="/Users/matthewmunson/Documents/GitHub/MachineVision/Assignment1/Program1.h">
 			<Option target="MachineVision"/>
 		</Unit>
-		<Unit filename="/Users/matthewmunson/Documents/GitHub/MachineVision/Assignment1/main.cpp">
+		<Unit filename="/Users/matthewmunson/Documents/GitHub/MachineVision/Assignment2/main.cpp">
 			<Option target="MachineVision"/>
 		</Unit>
 		<Unit filename="/Users/matthewmunson/Documents/GitHub/MachineVision/CMakeLists.txt">
