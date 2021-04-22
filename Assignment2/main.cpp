@@ -24,13 +24,23 @@
  * Implementation Details:
  *
  * int main()
+ * - Program entry point. Loads images, calls getMostCommonColor, then overlayBackground. Displays
+ * the overlay image and saves it to file.
  *
  * Vec3b getMostCommonColor(const Mat&image, int buckets)
+ * - Returns the most common color in an image.
+ *
  *
  * Mat overlayBackground(const Mat& foreground, const Mat& background, const Vec3b& mostCommonColor,
  *                    int threshold)
+ * - Overlays a background image onto the foreground image where the pixels are within a certain
+ * threshold of the provided most common color
+ *
+ * Vec3i findMaxBucket(const Mat& hist, int buckets)
+ * - Finds the maximum bucket in a 3D histogram and returns it as a Vec3i representing a color
  *
  * void displayImage(const Mat& image, const string windowName)
+ * - Displays an image, waits for user input, and destroys the window
  *
  **************************************************************************************************/
 
@@ -69,6 +79,18 @@ Mat overlayBackground(const Mat& foreground,
                       int threshold);
 
 /***************************************************************************************************
+ * Find Max Bucket
+ *
+ * Helper function for getMostCommonColor. From a 3D histogram, determines which bucket has the
+ * greatest count (in other words, the most common color in the image) and returns it as a Vec3i
+ * representing a pixel.
+ *
+ * See function implementation for detailed documentation, including purpose, preconditions, and
+ * postconditions.
+ **************************************************************************************************/
+Vec3i findMaxBucket(const Mat& hist, int buckets);
+
+/***************************************************************************************************
  * Display Image
  *
  * Helper function for displaying an image to a named window, allowing the user to view it until
@@ -77,7 +99,7 @@ Mat overlayBackground(const Mat& foreground,
  * See function implementation for detailed documentation, including purpose, preconditions, and
  * postconditions.
  **************************************************************************************************/
-void displayImage(const Mat& image, const string windowName);
+void displayImage(const Mat& image, const string& windowName);
 
 /***************************************************************************************************
  * Main Function
@@ -94,10 +116,8 @@ void displayImage(const Mat& image, const string windowName);
  **************************************************************************************************/
 int main()
 {
-
-    //TODO: Switch file path to foreground.jpg and background.jpg
-    string foreground_filename = "../data/Powerhouse.JPEG";
-    string background_filename = "../data/Mercy.png";
+    string foreground_filename = "foreground.jpg";
+    string background_filename = "background.jpg";
 
     Mat foreground = imread(foreground_filename, IMREAD_COLOR);
     Mat background = imread(background_filename, IMREAD_COLOR);
@@ -108,7 +128,7 @@ int main()
 
     displayImage(overlay, "Overlay Image");
 
-    imwrite("../data/Overlay.jpg", overlay);
+    imwrite("overlay.jpg", overlay);
 
     return 0;
 }
@@ -173,7 +193,9 @@ Mat overlayBackground(const Mat& foreground,
  *
  * Purpose:
  *
- * Finds the most common color in the provided image using a color histogram.
+ * Finds the most common color in the provided image using a color histogram. Goes through each
+ * pixel and determines which bucket it falls into. Uses findMaxBucket() to determine which bucket
+ * has the highest count, and returns this as a Vec3i.
  *
  * @pre: image is initialized and buckets is greater than zero.
  * @post: The most common color in the image is determined and returned as a Vector 3.
@@ -208,6 +230,29 @@ Vec3i getMostCommonColor(const Mat& image, int buckets)
         }
     }
 
+    return findMaxBucket(hist, buckets);
+}
+
+/***************************************************************************************************
+ * Find Max Bucket - Implementation
+ *
+ * @param hist : The 3D histogram from which the maximum bucket will be determined
+ * @param buckets : The amount of buckets in the color histogram used to determine most common color
+ *
+ * Purpose:
+ *
+ * From the populated 3D array of buckets, this function finds the max. Based on the number of
+ * buckets, it determines what the actual color was (bucket index to pixel conversion) and returns
+ * this as the most common color.
+ *
+ * @pre: hist is initialized and filled with bucket counts. Buckets is greater than 1. Max count is
+ *       greater than 0.
+ * @post: The bucket with the highest count is determined and returned as a Vector 3.
+ *
+ * @return a Vec3b representing the most common color in the provided image
+ **************************************************************************************************/
+Vec3i findMaxBucket(const Mat& hist, int buckets)
+{
     Vec3i mostCommonColor = Vec3i(0,0,0);
 
     int max = 0;
@@ -250,7 +295,7 @@ Vec3i getMostCommonColor(const Mat& image, int buckets)
  *
  * @return None.
  **************************************************************************************************/
-void displayImage(const Mat& image, const string windowName)
+void displayImage(const Mat& image, const string& windowName)
 {
     namedWindow(windowName);
     imshow(windowName, image);
